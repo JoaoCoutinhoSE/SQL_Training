@@ -95,11 +95,11 @@
             android:layout_marginLeft="40dp"
             android:layout_marginTop="32dp"
             android:text="EXCLUIR"
-            app:layout_constraintStart_toEndOf="@+id/button12"
+            app:layout_constraintStart_toEndOf="@+id/btnSalvar"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/btnSalvar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="34dp"
@@ -107,7 +107,7 @@
             android:layout_marginTop="34dp"
             android:layout_marginEnd="291dp"
             android:layout_marginRight="291dp"
-            android:text="Button"
+            android:text="SALVAR"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -116,8 +116,13 @@
             android:id="@+id/listViewClientes"
             android:layout_width="411dp"
             android:layout_height="420dp"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="83dp" />
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSalvar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
