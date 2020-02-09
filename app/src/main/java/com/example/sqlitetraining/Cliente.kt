@@ -1,10 +1,11 @@
 package com.example.sqlitetraining
 
+
 class Cliente{
-        var Nome: String
-        val Codigo: Int
-        val Telefone: Int
-        var email: String
+        val Nome: String
+        var Codigo: Int = 0
+        var Telefone: Int
+        val email: String
 
     //constructor insert
     constructor(Nome: String, Codigo: Int, Telefone: Int, email: String){
@@ -15,11 +16,18 @@ class Cliente{
     }
     //constructor update
 
-    constructor(Nome: String, Telefone: Int, email: String{
+    constructor(Nome: String, Telefone: Int, email: String){
         this.Nome = Nome
         this.Telefone = Telefone
         this.email = email
 
 
     }
+
+
+
+    init {
+
+    }
+
 }

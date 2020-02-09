@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity() {
 
         val listViewClientes = findViewById<ListView>(R.id.listViewClientes)
 
+        //ENTRADA E DELETA BANCO DE DADOS
+
+
 
 
 //        editCodigo = findViewById(R.id.editCodigo)
