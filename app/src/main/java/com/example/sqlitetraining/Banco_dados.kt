@@ -1,5 +1,6 @@
 package com.example.sqlitetraining
 
+import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -8,10 +9,10 @@ import android.provider.BaseColumns
 object FeedReaderContract {
     object FeedEntry : BaseColumns {
 
-         const val TABLE_NAME = "bd_clientes"
+         const val TABLE_NAME = "tb_clientes"
 
-         const val COLUMN_NAME = "Codigo"
-         const val COLUMN_CODE = "Nome"
+         const val COLUMN_NAME = "Nome"
+         const val COLUMN_CODE = "Codigo"
          const val COLUMN_CELLPHONE = "Telefone"
          const val COLUMN_EMAIL = "Email"
 
@@ -48,5 +49,26 @@ class Banco_dados(context: Context) : SQLiteOpenHelper(context, database_name, n
 
 
     }
+
+    val dbHelper = Banco_dados(context)
+
+
+    fun add_cliente(cliente: Cliente){
+
+        val db = dbHelper.writableDatabase
+
+        val values = ContentValues().apply {
+
+            put(FeedReaderContract.FeedEntry.COLUMN_NAME, cliente.Nome)
+            put(FeedReaderContract.FeedEntry.COLUMN_CELLPHONE, cliente.Telefone)
+            put(FeedReaderContract.FeedEntry.COLUMN_EMAIL, cliente.email)
+
+        }
+
+        db.insert(FeedReaderContract.FeedEntry.TABLE_NAME, null, values)
+        db.close()
+
+    }
+
 
 }

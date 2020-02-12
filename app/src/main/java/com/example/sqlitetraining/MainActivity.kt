@@ -1,26 +1,19 @@
 package com.example.sqlitetraining
 
+import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
 
-//    var editCodigo
-//    var editEmail
-//    var editNome
-//    var editTelefone
-//
-//    var btnSalvar
-//    var btnAtualizar
-//    var btnExcluir
-//
-//    var listViewClientes
+    val db = Banco_dados(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,20 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         val listViewClientes = findViewById<ListView>(R.id.listViewClientes)
 
-        //ENTRADA E DELETA BANCO DE DADOS
+        db.add_cliente(Cliente("Joao", "996403529", "joao@joao.com"))
 
+        Toast.makeText(this, "Salvo com sucesso", Toast.LENGTH_SHORT).show()
 
-
-
-//        editCodigo = findViewById(R.id.editCodigo)
-//        editEmail = findViewById(R.id.editEmail)
-//        editNome = findViewById(R.id.editNome)
-//        editTelefone = findViewById(R.id.editTelefone)
-//
-//        btnSalvar = findViewById(R.id.btnSalvar)
-//        btnAtualizar = findViewById(R.id.btnAtualizar)
-//        btnExcluir = findViewById(R.id.btnExcluir)
-//
-//        listViewClientes = findViewById(R.id.listViewClientes)
     }
 }
